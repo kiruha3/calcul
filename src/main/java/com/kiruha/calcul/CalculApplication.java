@@ -8,5 +8,6 @@ public class CalculApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CalculApplication.class, args);
+
 	}
 }
