@@ -22,6 +22,9 @@ public class CalculateService implements CalculateSirviceInterface {
 
     @Override
     public String div(Double num1, Double num2) {
+        if (num2 == 0) {
+            throw new IllegalArgumentException("На ноль делить нельзя!");
+        }
         return "Деление: "+checkNumber(num1, num2, "/");
     }
 
@@ -55,7 +58,7 @@ public class CalculateService implements CalculateSirviceInterface {
         if (num1 == null || num2 == null) {
             return "Вы указали не полное колличество данных";
         } else {
-            return num1 + "+" + num2 + "=" + simvoleAndResult(num1, num2, simvol);
+            return num1 +" "+ simvol+ " " + num2 + "=" + simvoleAndResult(num1, num2, simvol);
         }
     }
 
