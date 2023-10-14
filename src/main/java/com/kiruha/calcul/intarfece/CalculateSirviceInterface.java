@@ -7,7 +7,6 @@ public interface CalculateSirviceInterface {
 
     String div(Double num1, Double num2);
 
-
     String mult(Double num1, Double num2);
 
     public default Double simvoleAndResult(Double num1, Double num2, String simbol) {
