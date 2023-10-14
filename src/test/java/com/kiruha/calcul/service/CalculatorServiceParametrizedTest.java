@@ -38,6 +38,7 @@ class CalculatorServiceParametrizedTest {
                 Arguments.of("0", "0", "Умножение: " + calculateService.checkNumber(0.0, 0.0, "*"))
         );
     }
+
     public static Stream<Arguments> divParams() {
         return Stream.of(
                 Arguments.of("5", "5", "Деление: " + calculateService.checkNumber(5.0, 5.0, "/")),

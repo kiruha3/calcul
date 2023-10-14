@@ -2,7 +2,8 @@ package com.kiruha.calcul.service;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculateServiceTest {
     private final CalculateService calculatorService = new CalculateService();
@@ -24,7 +25,7 @@ class CalculateServiceTest {
         int num2 = 14;
 
         //Подготовка ожидаемого результата
-        String expectedResult = "Сложение: " + calculatorService.checkNumber((double)num1, (double)num2,"+");
+        String expectedResult = "Сложение: " + calculatorService.checkNumber((double) num1, (double) num2, "+");
 
         //Начало теста
         String actualResult = calculatorService.plus((double) num1, (double) num2);
@@ -38,7 +39,7 @@ class CalculateServiceTest {
         int num2 = 63;
 
         //Подготовка ожидаемого результата
-        String expectedResult = "Вычитание: " + calculatorService.checkNumber((double)num1, (double)num2,"-");
+        String expectedResult = "Вычитание: " + calculatorService.checkNumber((double) num1, (double) num2, "-");
 
         //Начало теста
         String actualResult = calculatorService.minus((double) num1, (double) num2);
@@ -52,12 +53,13 @@ class CalculateServiceTest {
         int num2 = 3;
 
         //Подготовка ожидаемого результата
-        String expectedResult = "Деление: " + calculatorService.checkNumber((double)num1, (double)num2,"/");
+        String expectedResult = "Деление: " + calculatorService.checkNumber((double) num1, (double) num2, "/");
 
         //Начало теста
         String actualResult = calculatorService.div((double) num1, (double) num2);
         assertEquals(expectedResult, actualResult);
     }
+
     @Test
     void div_withException() {
         //Подготовка входных данных
@@ -82,7 +84,7 @@ class CalculateServiceTest {
         int num2 = 6;
 
         //Подготовка ожидаемого результата
-        String expectedResult = "Умножение: " + calculatorService.checkNumber((double)num1, (double)num2,"*");
+        String expectedResult = "Умножение: " + calculatorService.checkNumber((double) num1, (double) num2, "*");
 
         //Начало теста
         String actualResult = calculatorService.mult((double) num1, (double) num2);
