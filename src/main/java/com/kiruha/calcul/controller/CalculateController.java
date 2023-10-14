@@ -24,6 +24,7 @@ public class CalculateController {
     @GetMapping(path = "/plus")
     public String plus(@RequestParam(required = false) Double num1, Double num2) {
         return calculateService.plus(num1, num2);
+
     }
 
     @GetMapping(path = "/minus")

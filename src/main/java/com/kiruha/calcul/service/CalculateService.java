@@ -15,6 +15,7 @@ public class CalculateService implements CalculateSirviceInterface {
         return "Сложение: "+checkNumber(num1, num2, "+");
     }
 
+
     @Override
     public String minus(Double num1, Double num2) {
         return "Вычитание: " +checkNumber(num1, num2, "-");
