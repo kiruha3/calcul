@@ -12,13 +12,12 @@ public class CalculateService implements CalculateSirviceInterface {
 
     @Override
     public String plus(Double num1, Double num2) {
-        return "Сложение: "+checkNumber(num1, num2, "+");
+        return "Сложение: " + checkNumber(num1, num2, "+");
     }
-
 
     @Override
     public String minus(Double num1, Double num2) {
-        return "Вычитание: " +checkNumber(num1, num2, "-");
+        return "Вычитание: " + checkNumber(num1, num2, "-");
     }
 
     @Override
@@ -26,12 +25,12 @@ public class CalculateService implements CalculateSirviceInterface {
         if (num2 == 0) {
             throw new IllegalArgumentException("На ноль делить нельзя!");
         }
-        return "Деление: "+checkNumber(num1, num2, "/");
+        return "Деление: " + checkNumber(num1, num2, "/");
     }
 
     @Override
     public String mult(Double num1, Double num2) {
-        return "Умножение: "+checkNumber(num1, num2, "*");
+        return "Умножение: " + checkNumber(num1, num2, "*");
     }
 
     @Override
@@ -59,7 +58,7 @@ public class CalculateService implements CalculateSirviceInterface {
         if (num1 == null || num2 == null) {
             return "Вы указали не полное колличество данных";
         } else {
-            return num1 +" "+ simvol+ " " + num2 + "=" + simvoleAndResult(num1, num2, simvol);
+            return num1 + " " + simvol + " " + num2 + "=" + simvoleAndResult(num1, num2, simvol);
         }
     }
 
